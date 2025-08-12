@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Clientes Cadastrados</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Nome
+            </th>
+            <th>
+                Telefone
+            </th>
+            <th>
+                Data de Nascimento
+            </th>
+            <th>
+                Ações
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for cliente in clientes %}
+        <tr>
+            <td>
+                {{ cliente.get_nome() }}
+            </td>
+            <td>
+                {{ cliente.get_telefone() }}
+            </td>
+            <td>
+                {{ cliente.get_data_nascimento() }}
+            </td>
+            <td>
+                <a href="{{ url_for('editar_cliente', id=cliente.get_id())}}">Editar</a>
+                <a href="{{ url_for('excluir_cliente', id=cliente.get_id())}}">Excluir</a>
+            </td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+
+<a href="{{ url_for('criar_cliente')}}">Cadastrar cliente </a>
+
+<p>
+    <a href="{{ url_for('listar_atendimentos')}}">Ver Atendimentos</a>
+</p>
+{% endblock %}

@@ -5,7 +5,7 @@ class ClienteRepository:
     def get_all_clientes(self):
         connection = get_db()
         cursor = connection.cursor()
-        cursor.execute("SELECT id, nome, telefone, data_nascimento FROM cliente")
+        cursor.execute("SELECT * FROM cliente")
         rows = cursor.fetchall()
         return [
             ClienteModel(id=row[0], nome=row[1], telefone=row[2], data_nascimento=row[3]) for row in rows

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}
+{% if cliente %}Editar Cliente{% else %}Cadastrar Cliente{% endif %}
+{% endblock %}
+
+{% block content %}
+<h1>{% if cliente %}Editar Cliente{% else %}Cadastrar Cliente{% endif %}</h1>
+
+<form method="post">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" value="{{ cliente.get_nome() if cliente else '' }}">
+
+    <label for="telefone">Telefone:</label>
+    <input type="text" id="telefone" name="telefone" value="{{ cliente.get_telefone() if cliente else '' }}">
+
+    <label for="data_nascimento">Data de Nascimento:</label>
+    <input type="date" id="data_nascimento" name="data_nascimento" value="{{ cliente.get_data_nascimento() if cliente else '' }}">
+
+    <button type="submit">Salvar</button>
+</form>
+{% endblock %}
