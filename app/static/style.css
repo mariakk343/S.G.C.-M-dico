@@ -1,0 +1,150 @@
+/* ===== Estilo global ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+/* Links */
+a {
+    color: #1abc9c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Formulários ===== */
+form {
+    background-color: #fff;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fafafa;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #1abc9c;
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(26,188,156,0.4);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Botão */
+button {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #16a085;
+}
+
+/* ===== Tabelas ===== */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #1abc9c;
+    color: white;
+}
+
+thead th {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 15px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody td {
+    padding: 12px 15px;
+}
+
+tbody tr:hover {
+    background-color: #ecfdf5;
+}
+
+/* Ações na tabela */
+td a {
+    padding: 6px 10px;
+    margin-right: 5px;
+    border-radius: 6px;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+td a[href*="editar"] {
+    background-color: #f1c40f;
+    color: white;
+}
+
+td a[href*="editar"]:hover {
+    background-color: #d4ac0d;
+}
+
+td a[href*="excluir"] {
+    background-color: #e74c3c;
+    color: white;
+}
+
+td a[href*="excluir"]:hover {
+    background-color: #c0392b;
+}
